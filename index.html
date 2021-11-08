@@ -1,63 +1,75 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<html class="no-js ss-preload" lang="pl">
 
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
+    <!-- ================ basic page needs ================ -->
+    <title>webco.design</title>
     <meta charset="utf-8">
-    <title>K.O.Kot</title>
     <meta name="description" content="">
     <meta name="author" content="Joanna Kokot">
 
-    <!-- mobile specific metas
-    ================================================== -->
+    <!-- ================ mobile specific metas ================ -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS
-    ================================================== -->
+    <!-- ================ css ================ -->
     <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=1">
 
-    <!-- favicons
-    ================================================== -->
+    <!-- ================ favicons ================ -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" href="favicon-logo.svg">
     <link rel="manifest" href="site.webmanifest">
 </head>
 
 <body id="top">
-
-
-    <!-- # preloader
-    ================================================== -->
     <div id="preloader">
         <div id="loader">
         </div>
     </div>
 
-    <!-- # page wrap
-    ================================================== -->
+    <!-- Messenger Wtyczka czatu -->
+    <div id="fb-root"></div>
+
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "106582928390017");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="s-pagewrap">
 
         <div class="particles-wrapper">
             <div id="particles-js"></div>
         </div>
-
-        <!-- ## site header 
-        ================================================== -->
         <header class="s-header">
 
             <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">K.O.Kot</a></span>
+                <span class="mobile-home-link"><a href="index.html">webco.design</a></span>
                 <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
             </div>
 
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
-                        <li class="current"><a href="#intro" class="smoothscroll">K.O.Kot</a></li>
+                        <li class="current"><a href="#intro" class="smoothscroll">webco.design</a></li>
                         <li><a href="#about" class="smoothscroll">O nas</a></li>
                         <li><a href="#products" class="smoothscroll">Produkty</a></li>
                         <li><a href="#works" class="smoothscroll">Projekty</a></li>
@@ -66,38 +78,28 @@
                 </nav>
             </div>
 
-        </header> <!-- end s-header -->
+        </header>
 
-        <!-- ## main content
-        ==================================================- -->
         <main class="s-content">
 
-            <!-- ### intro
-            ================================================== -->
+            <!-- ================ Intro ================ -->
             <section id="intro" class="s-intro target-section">
-
                 <div class="row intro-content wide">
-
                     <div class="column">
                         <div class="text-pretitle with-line">
                             Daj się poznać
                         </div>
-
                         <h1 class="text-huge-title">
                             Pomożemy Ci <br>
                             zaistnieć <br>
-                            w Internecie.
+                            w Internecie
                         </h1>
                     </div>
-
-
                     <ul class="intro-social">
                         <li><a href="https://www.facebook.com/joanna.gertrud.kokot/">Facebook</a></li>
                         <li><a href="https://github.com/Aberratio">GitHub</a></li>
                     </ul>
-
-                </div> <!-- end intro content -->
-
+                </div> 
                 <a href="#about" class="intro-scrolldown smoothscroll">
                     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                         fill-rule="evenodd" clip-rule="evenodd">
@@ -105,25 +107,18 @@
                             d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
                     </svg>
                 </a>
+            </section> 
 
-            </section> <!-- end s-intro -->
 
-
-            <!-- ### about
-            ================================================== -->
+            <!-- ================ Abouts ================ -->
             <section id="about" class="s-about target-section">
-
-
                 <div class="row about-info wide" data-animate-block>
-
                     <div class="column lg-6 md-12 about-info__pic-block">
                         <img src="images/ja.jpg" srcset="images/ja.jpg 1x, images/ja.jpg 2x" alt=""
                             class="about-info__pic" data-animate-el>
                     </div>
-
                     <div class="column lg-6 md-12">
                         <div class="about-info__text">
-
                             <h2 class="text-pretitle with-line" data-animate-el>
                                 O nas
                             </h2>
@@ -131,47 +126,39 @@
                                 Jesteśmy pełnym pasji, młodym zespołem zafascynowanym nowoczesnymi technologiami.
                                 Skupiamy się na kreowaniu estetycznych, intuicyjnych i responsywnych stron
                                 internetowych, które pomagają naszym klientom poprawić swój wirtualny wizerunek.
-                            </p>
-                            <a href="mailto:biuro@kokot.wroclaw.pl" class="btn btn--medium u-fullwidth" data-animate-el>Darmowa wycena</a>
-
+                             </p>
+                            <a href="mailto:biuro@webcodesign.pl" class="btn btn--medium u-fullwidth" data-animate-el>Darmowa wycena</a>
                         </div>
                     </div>
-                </div> <!-- about-info -->
+                </div>
+            </section>
 
-            </section> <!-- end s-about -->
-
-            <!-- ### products
-            ================================================== -->
+            <!-- ================ Products ================ -->
             <section id="products" class="s-products target-section">
-
                 <div class="row products-expertise" data-animate-block>
                     <div class="column lg-12">
-
-                        <h2 class="text-pretitle" data-animate-el>W czym możemy Ci pomóc.</h2>
-
+                        <h2 class="text-pretitle" data-animate-el>Oferta</h2>
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Nowocześnie</li>
-                            <li>Responsywnie</li>
-                            <li>Wszechstronnie</li>
-                            <li>Zmysłowo</li>
-                            <li>Intuicyjnie</li>
-                            <li>Skutecznie</li>
+                            <li>nowocześnie</li>
+                            <li>responsywnie</li>
+                            <li>wszechstronnie</li>
+                            <li>estetycznie</li>
+                            <li>dokładnie</li>
+                            <li>skutecznie</li>
                         </ul>
-
                     </div>
-                </div> <!-- end products-expertise -->
-
+                </div> 
 
                 <div class="row products-timelines" data-animate-block>
-
+                    
+                    <!-- Timeline - 1-->
                     <div class="column lg-6 tab-12">
-
                         <h2 class="text-pretitle" data-animate-el>
                             Produkty
                         </h2>
-
                         <div class="timeline" data-animate-el>
-
+                            
+                            <!-- Product - 1/1-->
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
@@ -198,18 +185,17 @@
                                 </div>
                             </div>
 
-                        </div> <!-- end timeline -->
+                        </div> 
+                    </div>
 
-                    </div> <!-- end column -->
-
+                    <!-- Timeline - 2 -->
                     <div class="column lg-6 tab-12">
-
                         <h2 class="text-pretitle" data-animate-el>
                             Usługi
                         </h2>
-
                         <div class="timeline" data-animate-el>
-
+                            
+                            <!-- Product - 1/2-->
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
@@ -228,6 +214,7 @@
                                 </div>
                             </div>
 
+                            <!-- Product - 2/2-->
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
@@ -237,23 +224,23 @@
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                    <ul>
-                                        <li>schematy baz danych</li>
-                                        <li>architektura systemu</li>
-                                        <li>implementacja</li>
-                                        <li>wdrożenie</li>
-                                        <li>testy</li>
-                                    </ul>
-
+                                        <ul>
+                                            <li>schematy baz danych</li>
+                                            <li>architektura systemu</li>
+                                            <li>implementacja</li>
+                                            <li>testy</li>
+                                            <li>wdrożenie</li>
+                                        </ul>
                                     </p>
                                 </div>
                             </div>
 
-                        </div> <!-- end timeline -->
+                        </div> 
 
-                    </div> <!-- end column -->
-                </div> <!-- end products-timelines -->
+                    </div>
+                </div> 
 
+            <!-- Cooperate -->
             <div class="u-add-top" data-animate-block>
                 <div class="row u-add-bottom">
                     <div class="column w-900-stack" data-animate-el>
@@ -270,6 +257,8 @@
                 </div>
 
                 <div class="row block-large-1-2 block-tab-full s-services__services item-list">
+                    
+                    <!-- Cooperate - Step 1 -->
                     <div class="column item item-service u-add-bottom" data-animate-el>
                         <span class="service-icon service-icon--product-design"></span>
                         <h3 class="item-title">Rozmowa</h3>
@@ -277,15 +266,18 @@
                             Ustalamy cel istniena strony, opisujemy grupę odbiorów, wizje, wymagania oraz oczekiwania.
                         </p>
                     </div>
+                    
+                    <!-- Cooperate - Step 2 -->
                     <div class="column item item-service u-add-bottom" data-animate-el>
                         <span class="service-icon service-icon--branding"></span>
                         <h3 class="item-title">Implementacja</h3>
                         <p>
                             Produkt powstaje w kilku etapach. Pod koniec każdego z nich, klient dostaje aktualny stan
                             prac do wglądu.
-
                         </p>
                     </div>
+                    
+                    <!-- Cooperate - Step 3 -->
                     <div class="column item item-service u-add-bottom" data-animate-el>
                         <span class="service-icon service-icon--illustration"></span>
                         <h3 class="item-title">Wdrożenie</h3>
@@ -293,6 +285,8 @@
                             Projekt zostaje wdrożony, prowadzimy krótkie szkolenie z jego obsługi.
                         </p>
                     </div>
+                    
+                    <!-- Cooperate - Step 4 -->
                     <div class="column item item-service u-add-bottom" data-animate-el>
                         <span class="service-icon service-icon--ecommerce"></span>
                         <h3 class="item-title">Gwarancja</h3>
@@ -303,26 +297,23 @@
                     </div>
                 </div>
             </div>
-            </section> <!-- end s-products -->
+            </section> 
 
-            <!-- ### works
-            ================================================== -->
+            <!-- ================ Portfolio + Testimonials ================ -->
             <section id="works" class="s-works target-section">
 
-
+                <!-- ================ Portfolio ================ -->
                 <div class="row works-portfolio">
-
                     <div class="column lg-12" data-animate-block>
-
                         <h2 class="text-pretitle" data-animate-el>
                             Projekty
                         </h2>
                         <p class="h1" data-animate-el>
                             Poniżej prezentujemy niektóre z naszych ostatnich realizacji.
                         </p>
-
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
 
+                            <!-- Portfolio - 1 -->
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
@@ -349,26 +340,26 @@
                                     </svg>
                                 </a>
                             </li>
-                            <!--end folio-list__item -->
 
+                            <!-- Portfolio - 2 -->
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-02">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/lamp.jpg"
-                                            srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x"
+                                        <img src="images/portfolio/eliza.jpg"
+                                            srcset="images/portfolio/eliza.jpg 1x, images/portfolio/eliza.jpg 2x"
                                             alt="">
                                     </div>
 
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Product Design
+                                            Strona Internetowa
                                         </div>
                                         <div class="folio-list__item-title">
-                                            The White Lamp.
+                                            Eliza Nowakowska
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
+                                <a class="folio-list__proj-link" href="https://elizanowakowska.com/" rel="nofollow" target="_blank" title="project link">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -377,127 +368,14 @@
                                     </svg>
                                 </a>
                             </li>
-                            <!--end folio-list__item -->
 
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/rucksack.jpg"
-                                            srcset="images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x"
-                                            alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Branding
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Rucksuck.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/skaterboy.jpg"
-                                            srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x"
-                                            alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Website
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Since Day One.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/sanddunes.jpg"
-                                            srcset="images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x"
-                                            alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Illustration
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Sand Dunes.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-06">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/minimalismo.jpg"
-                                            srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x"
-                                            alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Branding
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Minimalismo.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                                            fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <!--end folio-list__item -->
-
-                        </ul> <!-- end folio-list -->
-
-                    </div> <!-- end column -->
-
+                        </ul> 
+                    </div>
 
                     <!-- Modal Templates Popup
                     -------------------------------------------- -->
+
+                    <!-- Modal - 1 -->
                     <div id="modal-01" hidden>
                         <div class="modal-popup">
                             <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
@@ -514,123 +392,71 @@
 
                             <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
                         </div>
-                    </div> <!-- end modal -->
+                    </div> 
 
+                    <!-- Modal - 2 -->
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-lamp.jpg" alt="">
+                            <img src="images/portfolio/gallery/eliza.png" alt="">
 
                             <div class="modal-popup__desc">
-                                <h5>The White Lamp</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-                                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                <h5>Eliza Nowakowska - Wirtualna Asystentka</h5>
+                                    Eliza Nowakowska zgłosiła się do nas z prośbą o odświeżenie swojej wirtualnej wizytówki. Miała przemyślane wymagania - estetycznie, przejrzyście i nowocześnie. Dodatkowo strona musiała być responsywna, dostosowana do osób niedowidzących, spełniająca podstawowe wymogi SEO.
+                                    
+                                    <br>
+
+                                    Od początku było wiadomo, że kolorystka obracać się będzie wokół niebieskiego, jednak ostateczna szata graficzna jest wynikiem wielu eksperymentów. Cały projekt oparty został na jednej tylko czcionce - bardzo czytelnej Karli. Dzięki zręcznie modyfikowanej grubości napisów i wielkości liter udało się wyróżnić tytuły, a także uniknąć monotonii. 
+                                    
+                                    <br>
+
+                                    Elegancki charakter strony podtrzymywany jest poprzez subtelne animacje oraz dopasowane zdjęcia. 
+                                    
+                                    <br>
+                                    
+                                    Strona promieniuje kompetentnym i rzetelnym podejściem Elizy do pracy - co zresztą potwierdzają zebrane przez nią rekomendacje. </p>
                                 <ul class="modal-popup__cat">
-                                    <li>Branding</li>
+                                    <li>Projekt</li>
+                                    <li>Implementacja</li>
+                                    <li>SEO</li>
                                 </ul>
                             </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                            <a href="https://elizanowakowska.com/" rel="nofollow" target="_blank" class="modal-popup__details">Przejdź do strony</a>
                         </div>
-                    </div> <!-- end modal -->
+                    </div> 
 
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-rucksack.jpg" alt="">
+                </div> 
 
-                            <div class="modal-popup__desc">
-                                <h5>Rucksuck</h5>
-                                <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti
-                                    quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="">
-
-                            <div class="modal-popup__desc">
-                                <h5>Since Day One</h5>
-                                <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem
-                                    voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Website</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
-
-                            <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="">
-
-                            <div class="modal-popup__desc">
-                                <h5>Sand Dunes</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-                                    auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Illustration</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-06" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="">
-
-                            <div class="modal-popup__desc">
-                                <h5>Minimalismo</h5>
-                                <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia
-                                    cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                </div> <!-- end works-portfolio -->
-
-
+                <!-- ================ Testimonials ================ -->
                 <div class="row testimonials">
                     <div class="column lg-12" data-animate-block>
 
                         <div class="swiper-container testimonial-slider" data-animate-el>
-
                             <div class="swiper-wrapper">
 
+                                <!-- Testimonial - 1 -->
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author image"
+                                        <img src="images/avatars/eliza.jpg" alt="Author image"
                                             class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
-                                            <strong>Tim Cook</strong>
-                                            <span>CEO, Apple</span>
+                                            <strong>Eliza Nowakowska</strong>
+                                            <span>Wirtualna Asystentka</span>
                                         </cite>
                                     </div>
                                     <p>
-                                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas
-                                        tempore rem.
-                                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores
-                                        quaerat fuga rem nihil nostrum.
-                                        Laudantium quia consequatur molestias delectus culpa.
+                                        Firma Webco to ludzie w pełni zaangażowani w to, co robią. 
+                                        Profesjonalizm w tworzeniu stron internetowych oraz 
+                                        podejście do klienta to ich ogromne atuty.
+                                         Strona zaprojektowana we współpracy z nimi jest atrakcyjna wizualnie 
+                                         i pomaga mi w nawiązaniu  kontaktu z klientami. 
+                                         Profesjonalnie zaprojektowane usługi ułatwiają 
+                                         klientom możliwość zapoznania się bliżej z firmą. 
+                                         Polecam w 100% współpracę!
                                     </p>
-                                </div> <!-- end testimonial-slider__slide -->
+                                </div> 
 
+                                <!-- Testimonial - 2 -->
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__author">
                                         <img src="images/avatars/user-06.jpg" alt="Author image"
@@ -641,29 +467,24 @@
                                         </cite>
                                     </div>
                                     <p>
-                                        Współpraca z firmą K.O.KOT to czysta przyjemność 
+                                        Współpraca z firmą webco.design to czysta przyjemność 
                                         – wszystkie dotychczas zlecane zadania były wykonywane sumiennie 
                                         i terminowo. Komunikacja z przedstawicielem przebiega bardzo sprawnie,
                                         można nawet powiedzieć, że rozumiemy się bez słów. 
                                         Podczas tworzenia projektu firma przewiduje miejsce na twórczą dyskusję, 
                                         która otworzyła mi oczy na wiele nowych możliwości.
                                     </p>
-                                </div> <!-- end testimonial-slider__slide -->
+                                </div> 
 
                             </div> <!-- end swiper-wrapper -->
 
                             <div class="swiper-pagination"></div>
+                        </div> 
+                    </div> 
+                </div> 
+            </section> 
 
-                        </div> <!-- end swiper-container -->
-
-                    </div> <!-- end column -->
-                </div> <!-- end row testimonials -->
-
-            </section> <!-- end s-works -->
-
-
-            <!-- ### contact
-            ================================================== -->
+            <!-- ================ Contact ================ -->
             <section id="contact" class="s-contact target-section">
 
                 <div class="row contact-top">
@@ -677,13 +498,13 @@
                             przygotujemy dla Ciebie wyczerpującą odpowiedź!
                         </p>
                     </div>
-                </div> <!-- end contact-top -->
+                </div>
 
                 <div class="row contact-bottom">
                     <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Mail</h3>
                         <p class="contact-links">
-                            <a href="mailto:biuro@kokot.wroclaw.pl" class="mailtoui">biuro@kokot.wroclaw.pl</a> <br>
+                            <a href="mailto:biuro@webcodesign.pl" class="mailtoui">biuro@webcodesign.pl</a> <br>
                         </p>
                     </div>
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
@@ -694,24 +515,22 @@
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:biuro@kokot.wroclaw.pl"
+                        <a href="mailto:biuro@webcodesign.pl"
                             class="mailtoui btn btn--medium u-fullwidth contact-btn">Odezwij się.</a>
                     </div>
-                </div> <!-- end contact-bottom -->
+                </div> 
 
-            </section> <!-- end contact -->
+            </section>
 
-        </main> <!-- end s-content -->
+        </main> 
 
 
-        <!-- ## footer
-        ================================================== -->
+            <!-- ================ Footer ================ -->
         <footer class="s-footer">
 
             <div class="row">
                 <div class="column ss-copyright">
                     <span>© Copyright Joanna Kokot 2021</span>
-                    <span>Inspired by StyleShout</span>
                 </div>
 
                 <div class="ss-go-top">
@@ -724,20 +543,19 @@
                 </div>
             </div>
 
-        </footer> <!-- end s-footer -->
+        </footer> 
 
-    </div> <!-- end -s-pagewrap -->
+    </div> 
 
 
-    <!-- Java Script
-    ================================================== -->
+    <!-- ================ JavaScript ================ -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         particlesJS.load('particles-js', 'particles.json', function () {
-           
+   
         })
     </script>
 </body>
